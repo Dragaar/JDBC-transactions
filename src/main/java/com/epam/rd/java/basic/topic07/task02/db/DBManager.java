@@ -308,8 +308,10 @@ public class DBManager {
 		PreparedStatement stmt = null;
 		try {
 			con = DriverManager.getConnection(appProps.getProperty("connection.url"));
-			stmt = con.prepareStatement(DELETE_TEAM);
-			stmt.setInt(1, team.getId());
+			stmt = con.prepareStatement(UPDATE_TEAM);
+			//stmt.setInt(1, team.getId()); зміна id заборонена!
+			stmt.setString(1, team.getName());
+			stmt.setInt(2, team.getId());
 
 			int countSuccessfulInsertions = stmt.executeUpdate();
 

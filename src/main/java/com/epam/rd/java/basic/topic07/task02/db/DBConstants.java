@@ -28,7 +28,7 @@ public class DBConstants {
 
 	public static final String DELETE_TEAM = "DELETE FROM teams WHERE id = ?" ;
 
-	public static final String UPDATE_TEAM = "DELETE FROM teams WHERE id = ?" ;
+	public static final String UPDATE_TEAM = "UPDATE teams SET name = ? WHERE id = ?" ;
 
 	//-----------------------------
 
